@@ -1,0 +1,97 @@
+[0m17:46:27.122935 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024E1C849160>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024E1D4D2210>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024E1EC13ED0>]}
+
+
+============================== 17:46:27.168005 | b06866f3-e495-45aa-a9b1-87777c17c009 ==============================
+[0m17:46:27.168005 [info ] [MainThread]: Running with dbt=1.11.2
+[0m17:46:27.168628 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\Pichau\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'use_colors': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt init', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m17:46:48.825063 [debug] [MainThread]: Starter project path: C:\Users\Pichau\OneDrive\Documentos\data-master\delta-health-medallion-API\.venv\Lib\site-packages\dbt\include\starter_project
+[0m17:46:48.840645 [info ] [MainThread]: 
+Your new dbt project "dbt_project" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m17:46:48.841551 [info ] [MainThread]: Setting up your profile.
+[0m17:46:55.463590 [debug] [MainThread]: Command `dbt init` succeeded at 17:46:55.463373 after 28.44 seconds
+[0m17:46:55.464088 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024E1ECC0640>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024E1ED28EF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024E1EB47240>]}
+[0m17:46:55.464537 [debug] [MainThread]: Flushing usage events
+[0m17:46:56.572590 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:47:04.626573 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002330D659010>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002330B27C550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002330E7D3D90>]}
+
+
+============================== 17:47:04.630780 | 478ab5ac-8dd1-4a00-9ed7-fe286b5ff925 ==============================
+[0m17:47:04.630780 [info ] [MainThread]: Running with dbt=1.11.2
+[0m17:47:04.631451 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\Pichau\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'invocation_command': 'dbt init', 'indirect_selection': 'eager', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m17:47:37.553094 [debug] [MainThread]: Starter project path: C:\Users\Pichau\OneDrive\Documentos\data-master\delta-health-medallion-API\.venv\Lib\site-packages\dbt\include\starter_project
+[0m17:47:37.566627 [info ] [MainThread]: 
+Your new dbt project "dbt_project_datamaster" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m17:47:37.567618 [info ] [MainThread]: Setting up your profile.
+[0m17:47:42.056236 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m17:47:42.056645 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m17:47:42.056921 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m17:49:54.844008 [error] [MainThread]: Encountered an error:
+
+[0m17:49:54.848075 [error] [MainThread]: Traceback (most recent call last):
+  File "C:\Users\Pichau\OneDrive\Documentos\data-master\delta-health-medallion-API\.venv\Lib\site-packages\dbt\cli\requires.py", line 182, in wrapper
+    result, success = func(*args, **kwargs)
+                      ~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pichau\OneDrive\Documentos\data-master\delta-health-medallion-API\.venv\Lib\site-packages\dbt\cli\requires.py", line 128, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\Pichau\OneDrive\Documentos\data-master\delta-health-medallion-API\.venv\Lib\site-packages\dbt\cli\main.py", line 483, in init
+    results = task.run()
+  File "C:\Users\Pichau\OneDrive\Documentos\data-master\delta-health-medallion-API\.venv\Lib\site-packages\dbt\task\init.py", line 346, in run
+    self.setup_profile(profile_name)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\Pichau\OneDrive\Documentos\data-master\delta-health-medallion-API\.venv\Lib\site-packages\dbt\task\init.py", line 262, in setup_profile
+    self.create_profile_from_target(adapter, profile_name=profile_name)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pichau\OneDrive\Documentos\data-master\delta-health-medallion-API\.venv\Lib\site-packages\dbt\task\init.py", line 179, in create_profile_from_target
+    self.create_profile_from_profile_template(profile_template, profile_name)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pichau\OneDrive\Documentos\data-master\delta-health-medallion-API\.venv\Lib\site-packages\dbt\task\init.py", line 163, in create_profile_from_profile_template
+    target = self.generate_target_from_input(prompts, initial_target)
+  File "C:\Users\Pichau\OneDrive\Documentos\data-master\delta-health-medallion-API\.venv\Lib\site-packages\dbt\task\init.py", line 116, in generate_target_from_input
+    target = self.generate_target_from_input(
+        profile_template_local[key][choice], target
+    )
+  File "C:\Users\Pichau\OneDrive\Documentos\data-master\delta-health-medallion-API\.venv\Lib\site-packages\dbt\task\init.py", line 129, in generate_target_from_input
+    target[key] = click.prompt(
+                  ~~~~~~~~~~~~^
+        text, default=default, hide_input=hide_input, type=type
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Pichau\OneDrive\Documentos\data-master\delta-health-medallion-API\.venv\Lib\site-packages\click\termui.py", line 171, in prompt
+    value = prompt_func(prompt)
+  File "C:\Users\Pichau\OneDrive\Documentos\data-master\delta-health-medallion-API\.venv\Lib\site-packages\click\termui.py", line 154, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+[0m17:49:54.850898 [debug] [MainThread]: Command `dbt init` failed at 17:49:54.850756 after 170.33 seconds
+[0m17:49:54.851290 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002330FA57230>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002330F855D90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002330F847570>]}
+[0m17:49:54.851751 [debug] [MainThread]: Flushing usage events
+[0m17:49:55.793939 [debug] [MainThread]: An error was encountered while trying to flush usage events

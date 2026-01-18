@@ -1,0 +1,33 @@
+name: 'dbt_project_datamaster'
+version: '1.0.0'
+
+# Nome do perfil que criamos no profiles.yml
+profile: 'delta_health_profile'
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+# Configuração das camadas Medallion
+models:
+  dbt_project_datamaster:
+    # Camada Staging: Apenas organiza a leitura da Bronze (View)
+    staging:
+      +materialized: view
+
+    # Camada Silver: Limpeza e Mascaramento (Tabela Delta)
+    silver:
+      +materialized: table
+      +file_format: delta
+
+    # Camada Gold: Agregados de Negócio (Tabela Delta)
+    gold:
+      +materialized: table
+      +file_format: delta

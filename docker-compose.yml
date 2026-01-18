@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  # Nossa fonte de dados (Semana 1)
+  health_api:
+    build: ./api
+    container_name: health_api
+    ports:
+      - "8000:8000"
+
+  # Orquestrador com Spark e dbt integrados
+  airflow_spark:
+    build: .
+    container_name: airflow_spark
+    depends_on:
+      - health_api
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./storage:/opt/airflow/storage
+      - ./data_pipeline:/opt/airflow/data_pipeline
+      - ./dbt_project:/opt/airflow/dbt_project
+    environment:
+      - AIRFLOW__CORE__EXECUTOR=LocalExecutor
+      - AIRFLOW__CORE__LOAD_EXAMPLES=False
+      - JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
+    ports:
+      - "8080:8080"
+    command: standalone
+
+volumes:
+  storage:
