@@ -18,11 +18,11 @@ services:
       - ./dags:/opt/airflow/dags
       - ./storage:/opt/airflow/storage
       - ./data_pipeline:/opt/airflow/data_pipeline
-      - ./dbt_project:/opt/airflow/dbt_project
+      - ./dbt_project:/opt/airflow/dbt_project_datamaster
     environment:
       - AIRFLOW__CORE__EXECUTOR=LocalExecutor
       - AIRFLOW__CORE__LOAD_EXAMPLES=False
-      - JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
+      - JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
     ports:
       - "8080:8080"
     command: standalone

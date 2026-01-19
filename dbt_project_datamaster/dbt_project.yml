@@ -1,7 +1,7 @@
 name: 'dbt_project_datamaster'
 version: '1.0.0'
 
-# Nome do perfil que criamos no profiles.yml
+# Nome do perfil que configuramos no profiles.yml
 profile: 'delta_health_profile'
 
 model-paths: ["models"]
@@ -15,7 +15,7 @@ clean-targets:
   - "target"
   - "dbt_packages"
 
-# Configuração das camadas Medallion
+# Configuração das camadas Medallion no Lakehouse
 models:
   dbt_project_datamaster:
     # Camada Staging: Apenas organiza a leitura da Bronze (View)

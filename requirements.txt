@@ -1,0 +1,12 @@
+# --- API ---
+fastapi==0.115.0
+uvicorn==0.30.6
+requests==2.32.3
+
+# --- Spark + Delta ---
+pyspark==3.5.3
+delta-spark==3.2.1
+
+# --- dbt ---
+dbt-core==1.8.0
+dbt-spark==1.8.0
