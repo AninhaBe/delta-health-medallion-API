@@ -4,11 +4,12 @@ delta_health_profile:
     dev:
       type: spark
       method: session
+      host: localhost
+      port: 443
       schema: health_analytics
       threads: 1
       conf:
         spark.sql.extensions: io.delta.sql.DeltaSparkSessionExtension
         spark.sql.catalog.spark_catalog: org.apache.spark.sql.delta.catalog.DeltaCatalog
-        spark.sql.warehouse.dir: /opt/airflow/storage
+        spark.sql.warehouse.dir: G:/data-master/delta-health-medallion-API/storage
         spark.databricks.delta.retentionDurationCheck.enabled: "false"
-        spark.driver.extraJavaOptions: "-Divy.cache.dir=/tmp -Divy.home=/tmp"
